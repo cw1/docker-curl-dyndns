@@ -3,7 +3,7 @@
 ## Usage
  Simple run the following command:
  ```
- docker run -e INTERVAL_TIME=300 -e DYN_DNS_URL=https://example.com -e CURL_PARAM=--insecure cw1900/docker-curl-dyndns 
+ docker run --name "dyndns" -e INTERVAL_TIME="300" -e DYN_DNS_URL="https://example.com" -e CURL_PARAM="--insecure" cw1900/docker-curl-dyndns 
  ```
  
 ## Parameters
