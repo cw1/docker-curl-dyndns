@@ -17,7 +17,7 @@ old_ip=""
 while true; do
   current_ip=$(dig +short myip.opendns.com @resolver1.opendns.com)
   if ! [ "$current_ip" = "$old_ip" ]; then
-    curl -s $CURL_PARAM $DYN_DNS_URL > /dev/null
+    curl -s $CURL_PARAM $DYN_DNS_URL > /dev/null 2>&1
     old_ip="$current_ip"
     echo -n "DynDNS is updated to $current_ip on "; date
   fi
